@@ -9,7 +9,7 @@
     <meta name="description" content="Content for Interactive Data Science Fall 2018">
     <meta name="Cori Faklaris" content="">
     <link rel="icon" href="favicon.ico">
-    <title>Fusion Byte Tutorial</title>
+    <title>My Byte4 website</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -45,21 +45,22 @@
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
-	<h1>Data Pipeline Project Byte Example (Astraptes dataset)</h1>
-        <p>I was not able to get my preferred dataset to upload to Google Fusion Tables - maybe they stopped developing this product? </p>So I made up a question to go with the data used in the tutorial - which herbivore species are associated with which host plant species in the region in which the data was gathered? The data on location and host plant species that were recorded to have a link with the observation of the species in the dataset. </p>I have displayed the results on the web page.
-        </p>Source of data: "Astraptes fulgerator" 
-        Imported from astraptes_fulgerator_complex_sample_data (7).csv. 
-Dan Janzen & Winnie Hallwachs - Edited on 2016 January 28</p>
+	<h1>Byte 4 Tableau visualization example for "quantified selfie"</h1>
+<p>I had some issues with getting Tableau to recognize the conversion I did from Unix epoch time. But this chart gives some idea of the story my data tells - from Oct. 4-18, 2018, I displayed a marked lack of activity beyond sitting im my office at Newell Simon Hall at CMU. </p>
+        </p>
+        <p>Source of data: Personal data collection from iPhone SE smartphone using the AWARE framework. </p>
+        <p>Cleaned CSV files and source code: <a href="https://drive.google.com/drive/folders/1AZqdkrkyP-m09ZVVz5RLNSAu3T4YATXn?usp=sharing">https://drive.google.com/drive/folders/1AZqdkrkyP-m09ZVVz5RLNSAu3T4YATXn?usp=sharing</a> </p>
       </div>
 
-<h2>Map of where the species can be found:</h2>
-
-<iframe width="500" height="300" scrolling="no" frameborder="no"
-	src="https://fusiontables.google.com/embedviz?q=select+col12+from+1-941Px73b_XWWn3pmPHKp6WhbbSVNiEmKMadwe0&viz=MAP&h=false&lat=10.905796071399193&lng=-85.44281632812505&t=1&z=11&l=col12&y=45&tmplt=51&hml=TWO_COL_LAT_LNG"></iframe>
+<h2>Recognized activity I engaged in during the October 2018 study:</h2>
+<p>As classified by the iOS Activity Recognition plugin. I relabeled the categories from the API columns. 
+More than half of all data points were unclassified and are excluded from the chart. </p>
+<p>I sorted the categorize from least common to most common activities for ease of reading. 
+Hovering over the bars displays the exact counts of each classified instance of the activity. </p>
+<p>One question that the data leaves unanswered is whether "stationary" truly equals "sitting." From my examination of the timestamps in another program, it appears as though the iPhone framework did not record data overnight. Therefore, I believe that the unlabeled instances (excluded from this chart) MAY involve sleeping as well as sitting. Confirming when I was sleeping vs. sitting will be a question for another iteration of this study. :-)</p>
+<div class='tableauPlaceholder' id='viz1539921052958' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;By&#47;Byte4_8&#47;ForByte4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Byte4_8&#47;ForByte4' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;By&#47;Byte4_8&#47;ForByte4&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1539921052958');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 </p>
-<h2>Network graph of the link between herbivore species and host plant species (weighted by elevation):</h2>
-<iframe width="500" height="300" scrolling="no" frameborder="no" 
-	src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;viz=GVIZ&amp;t=GRAPH&amp;gc=true&amp;gd=false&amp;sdb=1&amp;rmax=100000&amp;q=select+col0%2C+col5%2C+col9+from+1-941Px73b_XWWn3pmPHKp6WhbbSVNiEmKMadwe0&amp;qrs=+where+col0+%3E%3D+&amp;qre=+and+col0+%3C%3D+&amp;qe=&amp;uiversion=2&amp;state=%7B%22ps%22%3A%221_a_-2h_-4_9_-24_-1d_5_2j_-1t_2_-12_r_g_27_-12_f_-3e_4_1_1p_-23_0_1h_-1e_m_h_2u_n_-2_31_8_-e_j_4_y_-2y_d_2b_1y_e_2v_1q_3_-e_13_c_3b_-1v_b_-15_1l_k_-2r_-39_7_-f_1j_i_-3_-31_h_-b_-2_j_2n_-32_6_-i_-3e_l_-t_-2r_%22%2C%22cx%22%3A0%2C%22cy%22%3A0%2C%22sw%22%3A478.8295361801627%2C%22sh%22%3A328.04917159577104%2C%22z%22%3A0%7D&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=500&amp;height=300"></iframe>
+
       </div> <!-- /page-header -->
     </div> <!-- /container -->
 
