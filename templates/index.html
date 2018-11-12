@@ -48,8 +48,19 @@
 	<h1>Byte 4 Tableau visualization example for "quantified selfie"</h1>
 <p>I had some issues with getting Tableau to recognize the conversion I did from Unix epoch time. But this chart gives some idea of the story my data tells - from Oct. 4-18, 2018, I displayed a marked lack of activity beyond sitting im my office at Newell Simon Hall at CMU. </p>
         </p>
-        <p>Source of data: Personal data collection from iPhone SE smartphone using the AWARE framework. </p>
-        <p>Cleaned CSV files and source code: <a href="https://drive.google.com/drive/folders/1AZqdkrkyP-m09ZVVz5RLNSAu3T4YATXn?usp=sharing">https://drive.google.com/drive/folders/1AZqdkrkyP-m09ZVVz5RLNSAu3T4YATXn?usp=sharing</a> </p>
+        <p><b>Source of data: </b>Personal data collection from iPhone SE smartphone using the AWARE framework. </p>
+        <p><b>Cleaned CSV files and source code:</b> <a href="https://drive.google.com/drive/folders/1AZqdkrkyP-m09ZVVz5RLNSAu3T4YATXn?usp=sharing">https://drive.google.com/drive/folders/1AZqdkrkyP-m09ZVVz5RLNSAu3T4YATXn?usp=sharing</a> </p>
+	<p><b>Data quality assessment: </b>This data quality was very poor, which was disappointing and made it difficulty to draw reliable and valid conclusions. </p>
+	<h4>Completeness - very poor</h4>
+	<p>First, there were many unexplainable gaps in the data where it just didn’t record for certain stretches of time. I can make an educated guess with the “activity” data below as to the unlabeled data corresponding to sleeping, but I cannot make a guess with a similar degree of certainty for other gaps in the data.</p>
+	<p>Second, the data did not record to the database in tables with a unique ID that could serve as a true “primary key” - the key that was identified in the documentation was simply the number of a row in the database table, which is insufficient for working with exported CSV files where, say, row “5” could pertain to different moments in time. Compounding the issue, the “timestamp” column proved impossible to extract to the millisecond, so that there were often five different, identical “timestamps” associated with different data rows.</p>
+	<h4>Coherence - mediocre</h4>
+	<p>Some of the data is consistent across tables, such as the “CMU-SECURE” wifi network being recorded at roughly the same timestamp as the “Newell Simon Hall” location. However, the overall picture of my life that was recorded by the framework did not match my expectations, largely because of the unexplained gaps in recording to the database and the problem of the timestamps not being extractable to the millisecond, leading to multiple data points being associated with the same timestamp.</p>
+	<h4>Correctness - Moderately good</h4>
+	<p>I found the the data that I was able to read looked accurate - a spot check of latitude and longitude along with addresses found that my locations were tracked relatively accurately. I have no way of assessing the data such as accelerometer in its raw form, but I found that the activity recognition was somewhat accurate. I believe that the “cycling” label actually corresponds to riding on the bus, however. </p>
+	<h4>Accountability - good</h4>
+	<p>This data came from my own smartphone and Google Cloud account. I gave access to the exported data files to my research assistants, but I alone have the account credentials to access the raw data and remote database. </p>
+	<p><b>What I learned: </b>After this experience, plus reaching out to the AWARE developers on Slack and consulting with other researchers and learning there are no easy fixes for my issues, I now doubt I can make use of this framework for real-life research. I did enjoy using Tableau for the table below and for the in-class activity, which used a much more complete dataset, and I would consider using Tableau in future projects outside of class.</p>
       </div>
 
 <h2>Recognized activity I engaged in during the October 2018 study:</h2>
